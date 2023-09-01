@@ -1,0 +1,16 @@
+.home-container-1{
+    min-height: 100vh;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items:left;
+    margin: 0% auto;
+    align-self: left;
+}
+.home-container-2{
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+    padding: 24px;
+}
