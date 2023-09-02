@@ -39,6 +39,9 @@ const QuestionsDetails = () => {
         copy("http://localhost:3000"+location.pathname)
         alert("Copied URL: http://localhost:3000"+location.pathname)
     }
+    const handleUpvote = ()=>{
+        dispatch(voteQuestion())
+    }
     const handleDelete = ()=>{
         dispatch(deleteQuestion(id, navigate))
     }
@@ -55,9 +58,9 @@ const QuestionsDetails = () => {
                             <h1>{question.questionTitle}</h1>
                             <div className='question-details-container-2'>
                                 <div className="question-votes">
-                                    <img src={upvote} alt='' width='18'/>
+                                    <img src={upvote} alt='' width='18' onClick={handleUpvote}/>
                                     <p>{question.upVote-question.downVote}</p>
-                                    <img src={downvote} alt="" width='36' />
+                                    <img src={downvote} alt="" width='36' onClick={handleDownvote}/>
                                 </div>
                             <div style={{width:"100%"}}>
                                 <p className='questions-body'>{question.questionBody}</p>
