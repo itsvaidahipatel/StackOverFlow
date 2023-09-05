@@ -14,3 +14,10 @@
     width: 1250px;
     padding: 24px;
 }
+.home-container-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1250px;
+    padding: 24px;
+}
