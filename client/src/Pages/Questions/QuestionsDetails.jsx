@@ -48,6 +48,7 @@ const QuestionsDetails = () => {
     const handleDelete = ()=>{
         dispatch(deleteQuestion(id, navigate))
     }
+    
   return (
     <div className='question-details-page'>
      {
@@ -83,7 +84,7 @@ const QuestionsDetails = () => {
                                         }
                                     <div>
                                         <p>asked {moment(question.postedOn).fromNow()}</p>
-                                        <Link to={`/User/${question.userId}`} className='user-link'style={{color:'#0086d8'}}>
+                                        <Link to={`/Users/${question.userId}`} className='user-link'style={{color:'#0086d8'}}>
                                             <Avatar backgroundColor="orange" px='8px' py='5px' >{question.userPosted.charAt(0).toUpperCase()}</Avatar>
                                             <div>
                                                 {question.userPosted}
