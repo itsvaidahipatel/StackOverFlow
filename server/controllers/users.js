@@ -19,8 +19,10 @@ export const updateProfile = async(req,res)=>{
         return res.status(404).send('No Such Question Availble...')
     }
     try {
+        // this below variable will be returned the updated profile because, we have passed new:true
         const updatedProfile = await users.findByIdAndUpdate(_id, {$set: {'name': name, 'about':about, 'tags':tags}}, {new:true})
+        res.status(200).json(updatedProfile)
     } catch (error) {
-        
+        res.status(405).json({message : error.message})
     }
 }

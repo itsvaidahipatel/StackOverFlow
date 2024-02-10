@@ -21,8 +21,9 @@ export const deleteAnswer = (id, answerId, noOfAnswers)=>API.patch(`/answer/dele
 
 export const voteQuestion = (id, value, userId)=>API.patch(`/questions/vote/${id}`,{value, userId})
 
-export const fetchAllUsers = ()=> API.get('/user/getAllUsers')
+export const getAllUsers = ()=> API.get('/user/getAllUsers')
 
+export const updateProfile = (id, updateData) => API.patch(`/users/update/${id}`, updateData)
 // let data = JSON.stringify({
 //     username: this.state.username,
 //     password: password
