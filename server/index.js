@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
     res.send("This is stackOverflow clone")  
 })
 
-app.use('/user',userRoutes)
+app.use('/users',userRoutes)
 app.use('/questions',questionRoutes)
 app.use('/answer',answerRoutes)
 

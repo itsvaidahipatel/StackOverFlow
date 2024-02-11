@@ -53,7 +53,6 @@ const Auth = () => {
             });
             dispatch(login(data,navigate))
         }
-        console.log({name,email,password})
     }
   return (
     <section className='auth-section'>

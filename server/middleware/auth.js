@@ -8,7 +8,6 @@ const auth = (req, res, next)=>{
 
         let decodeData = jwt.verify(token,'test') // test is given in the signup function, which is the secret for verifying
         req.userId = decodeData?.id
-
         next() // Only After verifying , the next function is called. Providing Security. :)
     } catch (error) {
         console.log(error);
