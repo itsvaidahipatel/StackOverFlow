@@ -6,12 +6,14 @@ const auth = (req, res, next)=>{
     try {
         const token = req.headers.authorization.split(' ')[1]
 
-        let decodeData = jwt.verify(token,process.env.JWT_SECRET) // process.env.JWT_SECRET is given in the signup function, which is the secret for verifying
+        // let decodeData = jwt.verify(token,process.env.JWT_SECRET) // process.env.JWT_SECRET is given in the signup function, which is the secret for verifying
+
+        let decodeData = jwt.verify(token,'string') // process.env.JWT_SECRET is given in the signup function, which is the secret for verifying
         req.userId = decodeData?.id
         next() // Only After verifying , the next function is called. Providing Security. :)
     } catch (error) {
         console.log(error);
     }
-
+ 
 }
 export default auth
